@@ -1,0 +1,21 @@
+https://data-newbie.tistory.com/m/945
+transformer<lstm
+1.시계열을 하위 시계열 패치로 분할=>트랜스포머의 입력 토큰
+2.채널 독립성=>각 채널과 동일한 임베딩 + 트랜스포머 가중치를 단일 단변량 시계열로 공유
+
+패치 설계 이점
+1.임베딩에서 지역적 특성 유지=>코스트 절감
+2.장기 예측 정확도 향상=>???
+3.masked된 사전 학습 데이터 셋 전이 가능=> 우리랑 다름
+
+채널 혼합은 입력 토큰이 모든 시계열 특징의 벡터를 사용하여 정보를 혼합하기 위해 임베딩 공간에 투영되는 경우 상정
+<=> 채널 독립은 입력 토큰이 단일 채널에서만 정보 포함
+<<CNN (Zheng et al., 2014) 및 선형 모델 (Zeng et al., 2022)에서만 검증
+
+다른 트랜스포머 기반 모델 LogTrans(Li et al., 2019),Autoformer(Wu et al., 2021) Triformer(Cirstea et al., 2022)
+
+Encoder만 핵심 아키텍쳐(그 중에서도 관찰된 신호를 매핑하는 vanilla Transformer)
+
+라벨없는 데이터는 NLP(Devlin et al.,2018)이나 CV(He et al., 2021)에서 오토인코더로 씀
+(Zerveas et al., 2021)에서 분류랑 회귀에서 쓰임 
+

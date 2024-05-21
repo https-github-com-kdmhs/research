@@ -1,0 +1,24 @@
+https://data-newbie.tistory.com/944
+
+1.transformer가 순서에 반감적인 성향이 있음
+2.time series를 trend랑 reminder로 분리해서 lstm-linear 학습
+
+예측 기법 
+-IMS(단일 단계 예측 반복)
+-DMS(단번에 다단계)
+IMS는 단일 단계 예측기 좋고, T 작은 경우 =>Transformer 특성과 DMS가 맞아보임
+
+데이터 전처리로 평균 0 정규화 사용<<Autoformer or FEDformer 사용
+SOTA transformer로 순서성 부여
+
+Vanilia Transformer Decoder =>코스트가 크고, 오류 누적 효과
+
+DLinear->Autoformer에서 분해방식+linear layer
+=>데이터에 trend가 높으면 유리
+Nlinear->dataset에 분포 shift가 있으면 유리
+->우리가 하는거에서 주기성과 연관됨
+
+Informer을 단순화할수록 성능 향상
+->self attention만 쓰면 됨
+
+

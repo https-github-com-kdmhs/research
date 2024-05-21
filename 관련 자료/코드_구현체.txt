@@ -1,0 +1,9 @@
+(1)patchtst<<vanlila transformer로 embedding한 모델
+(2)ARIMA<<본 연구 목적과 유사한 모델
+(3)LSTF-Linear << LSTF에 사용하는 선형 모델
+(4)FEDformer <<patchtst에서 비교모델
+
+(1)https://www.kaggle.com/code/vitexthorn/patchtst
+(2)https://www.kaggle.com/code/prashant111/arima-model-for-time-series-forecasting
+(3)https://github.com/cure-lab/LTSF-Linear
+(4)https://www.kaggle.com/datasets/seyuko/fedformer

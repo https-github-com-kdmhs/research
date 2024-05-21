@@ -1,0 +1,36 @@
+https://leedakyeong.tistory.com/entry/ARIMA%EB%9E%80-ARIMA-%EB%B6%84%EC%84%9D%EA%B8%B0%EB%B2%95-AR-MA-ACF-PACF-%EC%A0%95%EC%83%81%EC%84%B1%EC%9D%B4%EB%9E%80
+
+trend => 장기적 데이터 추세 , Cycle => 장기적 변화
+Seasonal => 주기성띄는 패턴, Random(Residual) =>불규칙 변동
+
+1.additive decomposition 
+yt = St + Tt + Rt =>Trend랑 Seasonal이 별개
+2.multiplicative decompostion
+yt = St*Tt*Rt => Tread와 Seasonal이 연관
+=>변동폭이 일정하지 않다면 로그변환(정상성 가정)
+
+변동폭 일정 X ->Log transform
+tread,seasonal 존재 O ->차분 (평균 일정)
+
+AR 모형(Auto Correlation)
+AR(p)=>yt= (sigma i (1 to p)wi*yt ) + c + et
+c is constant number
+et is error plot for t 
+wi is weight for i
+y is measured value for t
+
+MA 모형(Moving Average)
+MA(q)=>yt = (sigma i (1 to q)wi*ei) + c +et
+
+ARIMA(p,q,d) = d차 차분 데이터 위 AR(p)+MA(q)
+y't = c + AR(P)+MA(q)
+
+ACF(AutoCorrelation Function)
+t와 ACF는 반 비례, stationary할수록 0에 빠르게 도착
+ACF(k) = (sigma t (1 to n-k) (yt-y^{dot})(y_{t+k}-y^{dot})) / sigma t (1 to n) (yt-t^{dot})^2
+
+PACF(Partial ACF)
+인근한 이산적 상관관계만 계산
+PACF(k)=Corr(et,et-k)
+et = yt-(sigma i (i to k) Bi yt-i)
+

@@ -1,0 +1,2 @@
+http://dsba.korea.ac.kr/seminar/?mod=document&uid=2670<<PATCHTST
+https://medium.com/@lalf_klein/patchtst-for-time-series-forecasting-original-results-and-new-single-channel-experiments-f375699f7b91<<PATCHTST
